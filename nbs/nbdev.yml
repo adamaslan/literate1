@@ -2,8 +2,8 @@ project:
   output-dir: _docs
 
 website:
-  title: "literate documentation"
+  title: "literate1"
   site-url: "https://adamaslan.github.io/literate1"
-  description: "lightrag example"
+  description: ""
   repo-branch: main
   repo-url: "https://github.com/adamaslan/literate1"
