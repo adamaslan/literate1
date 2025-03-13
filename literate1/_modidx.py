@@ -5,4 +5,5 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://adamaslan.github.io',
                 'git_url': 'https://github.com/adamaslan/literate1',
                 'lib_path': 'literate1'},
-  'syms': {'literate1.core': {'literate1.core.foo': ('core.html#foo', 'literate1/core.py')}}}
+  'syms': { 'literate1.cb2': {'literate1.cb2.load_or_compute_embeddings': ('cb2.html#load_or_compute_embeddings', 'literate1/cb2.py')},
+            'literate1.core': {'literate1.core.foo': ('core.html#foo', 'literate1/core.py')}}}
