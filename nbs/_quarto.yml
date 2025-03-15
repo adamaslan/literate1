@@ -1,22 +1,73 @@
 project:
   type: website
+  output-dir: _docs
+  include-in-header:
+    - _includes/custom-header.html
+  include-after-body:
+    - _includes/custom-footer.html
+  metadata-files: [nbdev.yml, sidebar.yml]
 
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: 
+      - styles.css
+      - https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
     toc: true
     keep-md: true
+    page-layout: full
+    code-link: true
+    code-tools: true
   commonmark: default
 
 website:
+  title: "literate1"
+  site-url: "https://adamaslan.github.io/literate1/"
   twitter-card: true
   open-graph: true
   repo-actions: [issue]
   navbar:
     background: primary
     search: true
+    left:
+      - href: index.ipynb
+        text: Home
+      - href: 00_core.ipynb
+        text: Core
+      - href: 01_cb2.ipynb
+        text: CB2
+      - menu: More
+        contents:
+          - 02_test.ipynb
+          - 03_hello.ipynb
   sidebar:
     style: floating
+    tools: [toc, edit, source]
+    collapse-level: 2
+    sticky: true
 
-metadata-files: [nbdev.yml, sidebar.yml]
+execute:
+  echo: true
+  warning: false
+  error: "continue"
+  keep-ipynb: true
+
+metadata:
+  author:
+    name: adamaslan
+    email: chillcoders@gmail.com
+    url: https://github.com/adamaslan
+  repository:
+    url: https://github.com/adamaslan/literate1
+  copyright: |-
+    Copyright © 2025 onwards, adamaslan. Licensed under Apache 2.0.
+  crossref:
+    chapters: true
+    labels: [sec,fig,tab]
+    link-citations: true
+  keywords: [nbdev, jupyter, notebook, python]
+
+custom-fields:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
